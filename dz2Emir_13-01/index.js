@@ -10,25 +10,25 @@ function move() {
 		box2.style.left = `${xPos}px`;
 		setTimeout(() => {
 			move();
-		}, 160);
+		}, 200);
 	}  else if (xPos >= 340 && yPos < 340 ) {
 		yPos += 16;
 		box2.style.top = `${yPos}px`;
 		setTimeout(() => {
 			move();
-		}, 160);
+		}, 200);
 	}  else if (xPos > 0 && yPos >= 340) {
 		xPos -= 16;
 		box2.style.left = `${xPos}px`;
 		setTimeout(() => {
 			move();
-		}, 160)
+		}, 200)
 	} else if (xPos == 0 && yPos > 0) {
 		yPos -= 16;
 		box2.style.top = `${yPos}px`;
 		setTimeout(() => {
 			move();
-		}, 160)
+		}, 200)
 	}
 }
 move()
