@@ -112,3 +112,9 @@ const button = document.getElementById("btn");
 // 		document.body.scrollTop = 0;
 // 		document.documentElement.scrollTop = 0; 
 // }
+window.addEventListener("scroll", () => {
+  console.log(window.pageYOffset)
+  if (window.pageYOffset > 3745) {
+    openModal()
+  }
+});
