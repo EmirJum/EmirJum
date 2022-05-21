@@ -113,8 +113,8 @@ const button = document.getElementById("btn");
 // 		document.documentElement.scrollTop = 0; 
 // }
 window.addEventListener("scroll", () => {
-  console.log(window.pageYOffset)
-  if (window.pageYOffset > 3745) {
+  let nim = (window.pageYOffset)
+  if (window.pageYOffset > 3541) {
     openModal()
   }
 });

@@ -22,6 +22,6 @@ btn.addEventListener("click", () => {
 		const data = JSON.parse(request.response);
 		console.log(request.response);
 	});
-})
+});
 
 
