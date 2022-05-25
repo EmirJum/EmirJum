@@ -29,25 +29,29 @@ const convert = (elem, target, isTrue,)=> {
 		};
 		elem.value === "" ? (target.value = "") : null;
 	});
-	elem.addEventListener("input", ()=> {
-		const gun = new XMLHttpRequest();
-		gun.open("GET", "data.json");
-		gun.setRequestHeader("Content-type", "application/json");
-		gun.send();
-		gun.addEventListener("load", ()=> {
-			const form = JSON.parse(gun.response);
-			if(isTrue){
-				target.value = (elem.value / form.usd).toFixed(2);
-			}else {
-				target.value = (elem.value * form.usd).toFixed(2);
-			}
-			elem.value === "" ? (target.value = "") : null;
-		});
-	});
 	});
 };
 
 convert(som, euro, 12);
 convert(euro, som);
-convert(usd, som, 15);
-convert(som, usd)
+
+const fantom = (ulum, target, olTrue,)=> {
+	ulum.addEventListener("input", ()=> {
+		const reqest = new XMLHttpRequest();
+	reqest.open("GET", "app.json");
+	reqest.setRequestHeader("Content-type", "application/json");
+	reqest.send();
+	reqest.addEventListener("load", ()=> {
+		const response = JSON.parse(reqest.response);
+		if(olTrue){
+			target.value = (ulum.value / response.usd).toFixed(2);
+		}else {
+			target.value = (ulum.value * response.usd).toFixed(2);
+		};
+		ulum.value === "" ? (target.value = "") : null;
+	});
+	});
+};
+
+fantom(som, usd, 13);
+fantom(usd, som);
