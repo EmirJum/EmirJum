@@ -34,6 +34,8 @@ const convert = (elem, target, isTrue,)=> {
 
 convert(som, euro, 12);
 convert(euro, som);
+convert(euro, usd, 15)
+convert(usd, euro)
 
 const fantom = (ulum, target, olTrue,)=> {
 	ulum.addEventListener("input", ()=> {
@@ -55,3 +57,5 @@ const fantom = (ulum, target, olTrue,)=> {
 
 fantom(som, usd, 13);
 fantom(usd, som);
+fantom(euro, usd, 15)
+fantom(usd, euro)
